@@ -27,6 +27,21 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="file:///Users/yeri/Desktop/FlixGIF.gif" width=250><br>
 
 ### Notes
-1. App icon in home screen, launch screen 开屏
-2. Scroll a list of movies
-2.1.
+- App icon in home screen, launch screen 开屏
+  - LauchScree.sb
+- Scroll a list of movies
+  - Create network request from [API](https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed)。
+  - **TableView Setup**!
+    + 4步走：
+      - Declare UIViewController class as UITableViewDataSource (UIViewControllerDataSource, UIVCDele)
+      - 2 required data source methods (return the number of rows in a section (cells) & the actual table view cell to be displayed)
+      - Assign the view controller to the datasource property (tableView.dataSource = self)
+      - reload
+    + Auto-layout
+  - **Customize cells** in "MovieCell"
+- Download poster with cocopod (**3rd party library**)
+  - image Url = base_url + size + file_path (https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg)
+  - install pod "AlamofireImage" via terminal
+  - use workspace
+  - using af_settingImage from new lib
+
